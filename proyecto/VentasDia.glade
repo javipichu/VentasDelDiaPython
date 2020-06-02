@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.0 -->
+<!-- Generated with glade 3.22.1 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="Main">
@@ -10,6 +10,9 @@
     <property name="resizable">False</property>
     <property name="window_position">center</property>
     <signal name="destroy" handler="on_Main_destroy" swapped="no"/>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
     <child>
       <object class="GtkBox" id="mainContenedor">
         <property name="visible">True</property>
@@ -24,9 +27,13 @@
               <object class="GtkLabel" id="lblTitulo">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Casa Del Libro</property>
+                <property name="label" translatable="yes">Ventas del Dia</property>
                 <property name="width_chars">0</property>
                 <property name="max_width_chars">0</property>
+                <attributes>
+                  <attribute name="foreground" value="#7373d2d21616"/>
+                  <attribute name="background" value="#34346565a4a4"/>
+                </attributes>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -104,7 +111,7 @@
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkButton" id="btnStock">
-                <property name="label" translatable="yes">LIbros en Stock</property>
+                <property name="label" translatable="yes">Productos en Stock</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -155,7 +162,7 @@
         </child>
         <child>
           <object class="GtkButton" id="btnSalir">
-            <property name="label" translatable="yes">SALIR</property>
+            <property name="label">Salir</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
@@ -174,9 +181,6 @@
           </packing>
         </child>
       </object>
-    </child>
-    <child type="titlebar">
-      <placeholder/>
     </child>
   </object>
 </interface>

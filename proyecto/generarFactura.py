@@ -8,14 +8,12 @@ from reportlab.lib import colors
 from sqlite3 import dbapi2
 
 class generarFactura():
-    """Clase que genera un PDF con la factura de un cliente de la Casa del Libro.
+    """Clase que genera un PDF con la factura de un cliente.
                     Metodos:
                          __init__ --Constructor
             """
     def __init__(self,id):
-        """Constructor de la clase que genera una factura de la Casa del libro.
-                 Esta clase genera una factura con la informacion del cliente y la lista de productos que compra con el precio total
-                 a pagar.
+        """Constructor de la clase que genera una factura .
                              Parametros:
                                    :param id: id de la factura que se quiere generar
 
@@ -26,7 +24,7 @@ class generarFactura():
         factura = []
 
 
-        factura.append(list(['','','CASA DEL LIBRO','','']))
+        factura.append(list(['','','VentasDia','','']))
         try:
             ###Conectamos con la base de datos
             baseDatos = dbapi2.connect("BaseDeDatos.dat")

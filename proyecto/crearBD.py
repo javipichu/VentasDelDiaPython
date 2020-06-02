@@ -24,8 +24,8 @@ try:
     cursor.execute("insert into productos values('idpro2','Tarrina de Helado','Helados en tarrina de sabores artesanales', 300, 2.5, 'idprov2')")
     cursor.execute("insert into productos values('idpro3','Tartas','Elavoracion de tartas tradicionales caseras', 1000, 3.5, 'idprov1')")
 
-    cursor.execute("insert into facturasClientes values(1,'Dia','654987321','Av. de balaidos Nº13','dia@gmail.com')")
-    cursor.execute("insert into facturasClientes values(1,'Eroski','321564879','Av. do Alcalde Portanet Nº4','eroski@gmail.com')")
+    cursor.execute("insert into facturasClientes values(1,'Dia','654987321','Av. de balaidos Nº13','Dia@gmail.com')")
+    cursor.execute("insert into facturasClientes values(1,'Dia','321564879','Av. do Alcalde Portanet Nº4','Dia@gmail.com')")
 
     cursor.execute("insert into facturasInfo values(1,'pro1',2)")
     cursor.execute("insert into facturasInfo values(2,'pro2',1)")

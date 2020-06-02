@@ -1,10 +1,10 @@
 from setuptools import setup , find_packages
 
 setup(
-    name="CasaDelLibro",
+    name="VentasdelDia",
     version="1.0",
-    author="David",
-    author_email="dalonsofernandez@danielcastelao.org",
+    author="javi",
+    author_email="jalvarezotero@danielcastelao.org",
     license="GLP",
     platforms="Unix",
     clasifiers=["Development Status :: 3 - Alpha",
@@ -23,5 +23,5 @@ setup(
         "proyecto": ["*"],
         "Imagenes_Docu": ["*"],
     },
-    entry_points={'console_scripts': ['openProyect = proyecto.CasaDelLibro:main', ], }
+    entry_points={'console_scripts': ['openProyect = proyecto.VentasdelDia:main', ], }
 )

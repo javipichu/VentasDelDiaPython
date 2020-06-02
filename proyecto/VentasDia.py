@@ -10,7 +10,7 @@ from gi.repository import Gtk
 
 
 class CasaDelLibro():
-    """Ventana Principal de la Casa del Libro.
+    """Ventana Principal Ventas Dia.
        Metodos:
             __init__ --Constructor
 
@@ -20,8 +20,7 @@ class CasaDelLibro():
             on_btnInventario_clicked -- Acceso a la ventana Inventario
     """
     def __init__(self):
-        """Constructor de la Ventana Principal de la Casa del Libro.
-           Ventana que mediante unos botones nos da acceso al resto del programa.
+        """Constructor de la Ventana Principal .
 
             Parametros:
             -No tiene.
@@ -31,13 +30,13 @@ class CasaDelLibro():
 
         """
         builder =  Gtk.Builder()
-        builder.add_from_file("CasaDelLibro.glade")
+        builder.add_from_file("VentasDia.glade")
 
         self.ventana = builder.get_object("Main")
 
         ##AÑADIMOS LA CABECERA
         cabeceira = Gtk.HeaderBar(title="Ventana Principal")
-        cabeceira.set_subtitle("Bienvenido a la Casa del Libro")
+        cabeceira.set_subtitle("Bienvenido a Los Productos del Dia")
         cabeceira.props.show_close_button = True
 
         self.ventana.set_titlebar(cabeceira)
@@ -57,7 +56,6 @@ class CasaDelLibro():
 
     def on_btnAñadirProv_clicked(self, boton):
         """Abre la ventana Añadir Proveedor
-                Este metodo accede a la ventana Añadir Proveedor
 
             :param boton: acceso al botton
             :return: None
@@ -67,7 +65,6 @@ class CasaDelLibro():
 
     def on_btnModProv_clicked(self, boton):
         """Abre la ventana Modificar Proveedor
-                        Este metodo accede a la ventana Modificar Proveedor
 
                     :param boton: acceso al botton
                     :return: None
@@ -77,7 +74,6 @@ class CasaDelLibro():
 
     def on_btnFactura_clicked(self, boton):
         """Abre la ventana Crear Factura
-                Este metodo accede a la ventana Crear Factura
 
             :param boton: acceso al botton
             :return: None
@@ -86,8 +82,7 @@ class CasaDelLibro():
         CrearFactura(self.ventana)
 
     def on_btnInventario_clicked(self, boton):
-        """Abre la ventana ventana Inventario
-                Este metodo accede a la ventana Inventario
+        """Abre la ventana Inventario
 
             :param boton: acceso al botton
             :return: None

@@ -7,17 +7,17 @@ from gi.repository import Gtk
 from sqlite3 import dbapi2
 
 class CrearFactura(Gtk.Window):
-    """Ventana CrearFactura de la Casa del Libro.
+    """Ventana CrearFactura.
             Metodos:
                  __init__ --Constructor
-                 on_btnVolver_clicked -- Volver a la ventana pincipal
-                 on_btnAñadir_clicked -- Añadir un nuevo producto a la factura
-                 on_btnGuardar_clicked -- Guarda la factura en la base de datos
-                 on_btnGenerarFactura_clicked -- Genera la factura.
+                 Volver -- Volver a la ventana pincipal
+                 Añadir -- Añadir un nuevo producto a la factura
+                 Guardar -- Guarda la factura en la base de datos
+                 GenerarFactura-- Genera la factura.
     """
     def __init__(self,main):
-        """Constructor de la Ventana CrearFactura de la Casa del Libro.
-            Esta ventana nos permite crear y generar una factura de las ventas de la tienda.
+        """Constructor de la Ventana CrearFactura.
+
                 Parametros:
                     :param main: recibe el objeto window del main para poder volver a la ventana principal.
                 Excepciones:
@@ -57,9 +57,9 @@ class CrearFactura(Gtk.Window):
                 self.modeloProductos.append([producto[0]])
 
         except (dbapi2.DatabaseError):
-            print("ERROR EN LA BASE DE DATOS")
+            print("Error en la Base de Datos")
         finally:
-            print("Cerramos la conexion a la BD")
+            print("Cerramos la conexion")
             cursor.close()
             baseDatos.close()
 
@@ -109,9 +109,9 @@ class CrearFactura(Gtk.Window):
                 fac = str(factura[0])+" - "+factura[1]
                 self.facturas.append([fac])
         except (dbapi2.DatabaseError):
-            print("ERROR EN LA BASE DE DATOS")
+            print("Error de la Base de Datos")
         finally:
-            print("Cerramos la conexion a la BD")
+            print("Cerramos la conexion")
             cursor.close()
             baseDatos.close()
         ##Combo
@@ -137,7 +137,6 @@ class CrearFactura(Gtk.Window):
 
     def on_btnVolver_clicked(self, boton):
         """"Vuelve a la ventana principal
-                Este metodo accede a la ventana principal
             :param boton: acceso al botton
             :return: None
         """
@@ -146,7 +145,6 @@ class CrearFactura(Gtk.Window):
 
     def on_btnAñadir_clicked(self, boton):
         """Este metodo se usa para añadir los priductos a la lista
-                Recoge los datos del comboBox y el entry y genera una lista de los productos.
                      :param boton: acceso al botton
                      :return: None
         """
@@ -157,7 +155,6 @@ class CrearFactura(Gtk.Window):
 
     def on_btnGuardar_clicked(self, boton):
         """Este metodo se usa para guardar la factura
-                 Recoge los datos del formulario y la lista y guarda la informacion en la base de datos.
                       :param boton: acceso al botton
                       :return: None
         """
@@ -175,7 +172,7 @@ class CrearFactura(Gtk.Window):
             insertarFactura = cursor.execute(
                 "insert into facturasClientes values('" + str(idNuevo) + "','" + nombre + "','" + telefono+ "','" + direccion + "','" + correo + "')")
             baseDatos.commit()
-            print("DETALLES DE LA FACTURA AÑADIDOS CON EXITO")
+            print("DETALLES AÑADIDOS CON EXITO")
             fac = str(idNuevo)+" - "+nombre
             self.facturas.append([fac])
 
@@ -184,11 +181,10 @@ class CrearFactura(Gtk.Window):
             idProducto = cursorIDProducto.fetchone()[0]
             insertarFactura = cursor.execute("insert into facturasInfo values('" + str(idNuevo) + "','"+idProducto+"','"+ str(lista[1]) + "')")
             baseDatos.commit()
-            print("INFO DE LA FACTURA AÑADIDA CON EXITO")
+            print("INFO AÑADIDA CON EXITO")
 
     def on_btnGenerarFactura_clicked(self, boton):
         """"Este metodo se usa para generar la factura
-                 Recoge los datos de la base de datos y genera un pdf con los datos de la factura
                       :param boton: acceso al botton
                       :return: None
         """

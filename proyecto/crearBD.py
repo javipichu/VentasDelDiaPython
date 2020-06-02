@@ -16,16 +16,16 @@ try:
     cursor.execute("create table facturasInfo(idFactura number,idProducto text, cantidad number)")
 
     ###Rezlizamos Inserts en las tablas para tener valores.
-    cursor.execute("insert into proveedores values('idprov1','Galaxia','123-675-453','Av. Castelao Nº56','986456784','galaxiaeditorial@gmail.com')")
-    cursor.execute("insert into proveedores values('idprov2','Xerais','444-678-453','C.Urzaiz Nº89','988789563','xeraiseditorial@gmail.com')")
-    cursor.execute("insert into proveedores values('idprov3','Rodeira','563-234-789','C.Genaro de la Fuente Nº76','986097094','rodeiraeditorial@gmail.com')")
+    cursor.execute("insert into proveedores values('idprov1','El Cornet','123-456-789','Av. calle del paraiso Nº56','986123456','ElCortel@gmail.com')")
+    cursor.execute("insert into proveedores values('idprov2','Helados La Cumbre','987-654-321','C. Super Mario Bross Nº89','986654987','HeladosLaCumbre@gmail.com')")
+    cursor.execute("insert into proveedores values('idprov3','Fit Fruit','563-234-789','C.Abrazamozas Nº76','9869876541','FitFruit@gmail.com')")
 
-    cursor.execute("insert into productos values('idpro1','Os Arriscados','Miguel Anxo Mouriño', 300, 19,'idprov1')")
-    cursor.execute("insert into productos values('idpro2','Enderezo descoñecido','Kressmann Taylor', 50, 25, 'idprov2')")
-    cursor.execute("insert into productos values('idpro3','A pedra da serpe','Milio Rodríguez Cueto', 60, 27, 'idprov3')")
+    cursor.execute("insert into productos values('idpro1','Zumo de Naranja','Productos nutritivos con sabores frescos', 2000, 1.5,'idprov3')")
+    cursor.execute("insert into productos values('idpro2','Tarrina de Helado','Helados en tarrina de sabores artesanales', 300, 2.5, 'idprov2')")
+    cursor.execute("insert into productos values('idpro3','Tartas','Elavoracion de tartas tradicionales caseras', 1000, 3.5, 'idprov1')")
 
-    cursor.execute("insert into facturasClientes values(1,'Lafer','658741236','C. Galeraias Calvario Nº7','lafer@gmail.com')")
-    cursor.execute("insert into facturasClientes values(1,'Papeles','658741236','C. Genaro de la Fuente Nº56','papeles@gmail.com')")
+    cursor.execute("insert into facturasClientes values(1,'Dia','654987321','Av. de balaidos Nº13','dia@gmail.com')")
+    cursor.execute("insert into facturasClientes values(1,'Eroski','321564879','Av. do Alcalde Portanet Nº4','eroski@gmail.com')")
 
     cursor.execute("insert into facturasInfo values(1,'pro1',2)")
     cursor.execute("insert into facturasInfo values(2,'pro2',1)")

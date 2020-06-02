@@ -1,0 +1,3 @@
+[console_scripts]
+openProyect = proyecto.CasaDelLibro:main
+

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: CasaDelLibro
+Version: 1.0
+Summary: Proyecto DI con sphinx reportlab y mysqllite
+Home-page: UNKNOWN
+Author: David
+Author-email: dalonsofernandez@danielcastelao.org
+License: GLP
+Description: UNKNOWN
+Keywords: empaquetado instalador paquetes
+Platform: Unix

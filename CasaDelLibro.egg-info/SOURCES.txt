@@ -1,0 +1,7 @@
+README.md
+setup.py
+CasaDelLibro.egg-info/PKG-INFO
+CasaDelLibro.egg-info/SOURCES.txt
+CasaDelLibro.egg-info/dependency_links.txt
+CasaDelLibro.egg-info/entry_points.txt
+CasaDelLibro.egg-info/top_level.txt

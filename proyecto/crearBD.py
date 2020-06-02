@@ -20,9 +20,9 @@ try:
     cursor.execute("insert into proveedores values('idprov2','Helados La Cumbre','987-654-321','C. Super Mario Bross Nº89','986654987','HeladosLaCumbre@gmail.com')")
     cursor.execute("insert into proveedores values('idprov3','Fit Fruit','563-234-789','C.Abrazamozas Nº76','9869876541','FitFruit@gmail.com')")
 
-    cursor.execute("insert into productos values('idpro1','Zumo de Naranja','Productos nutritivos con sabores frescos', 2000, 1.5,'idprov3')")
-    cursor.execute("insert into productos values('idpro2','Tarrina de Helado','Helados en tarrina de sabores artesanales', 300, 2.5, 'idprov2')")
-    cursor.execute("insert into productos values('idpro3','Tartas','Elavoracion de tartas tradicionales caseras', 1000, 3.5, 'idprov1')")
+    cursor.execute("insert into productos values('idpro1','Zumo de Naranja','Productos nutritivos con sabores frescos', 2000, 1.5$,'idprov3')")
+    cursor.execute("insert into productos values('idpro2','Tarrina de Helado','Helados en tarrina de sabores artesanales', 300, 2.5$, 'idprov2')")
+    cursor.execute("insert into productos values('idpro3','Tartas','Elavoracion de tartas tradicionales caseras', 1000, 3.5$, 'idprov1')")
 
     cursor.execute("insert into facturasClientes values(1,'Dia','654987321','Av. de balaidos Nº13','Dia@gmail.com')")
     cursor.execute("insert into facturasClientes values(1,'Dia','321564879','Av. do Alcalde Portanet Nº4','Dia@gmail.com')")

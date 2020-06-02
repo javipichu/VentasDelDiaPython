@@ -17,7 +17,6 @@ class CrearFactura(Gtk.Window):
     """
     def __init__(self,main):
         """Constructor de la Ventana CrearFactura.
-
                 Parametros:
                     :param main: recibe el objeto window del main para poder volver a la ventana principal.
                 Excepciones:

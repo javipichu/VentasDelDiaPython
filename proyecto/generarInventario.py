@@ -8,13 +8,12 @@ from reportlab.lib import colors
 from sqlite3 import dbapi2
 
 class generarInventario():
-    """Clase que genera un PDF con la lista de productos de la Casa del Libro.
+    """Clase que genera un PDF con la lista de productos.
                 Metodos:
                      __init__ --Constructor
         """
     def __init__(self):
-        """Constructor de la clase que genera un informe de los Casa del Libro.
-                     Esta clase genera una lista en forma de tabla con todos los datos de los productos
+        """Constructor de la clase que genera un informe.
 
                      Parametros:
                         -No tiene
@@ -24,7 +23,7 @@ class generarInventario():
                 """
         listaInventario = []
 
-        listaInventario.append(list(['','','CASA DEL LIBRO','','','']))
+        listaInventario.append(list(['','','DIA','','','']))
         listaInventario.append(list(['Lista de Productos','','','','','']))
         listaInventario.append(list(['CODIGO', 'NOMBRE', 'DESCRIPCION', 'STOCK', 'PRECIO','PROVEEDOR']))
 

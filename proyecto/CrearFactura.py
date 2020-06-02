@@ -6,6 +6,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from sqlite3 import dbapi2
 
+
 class CrearFactura(Gtk.Window):
     """Ventana CrearFactura.
             Metodos:
@@ -15,7 +16,8 @@ class CrearFactura(Gtk.Window):
                  Guardar -- Guarda la factura en la base de datos
                  GenerarFactura-- Genera la factura.
     """
-    def __init__(self,main):
+
+    def __init__(self, main):
         """Constructor de la Ventana CrearFactura.
                 Parametros:
                     :param main: recibe el objeto window del main para poder volver a la ventana principal.
@@ -62,7 +64,6 @@ class CrearFactura(Gtk.Window):
             cursor.close()
             baseDatos.close()
 
-
         self.cajaProductos = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         celdaCombo = Gtk.CellRendererText()
         self.cmbProductos = Gtk.ComboBox(model=self.modeloProductos)
@@ -88,7 +89,6 @@ class CrearFactura(Gtk.Window):
         columnaCantidad = Gtk.TreeViewColumn('Cantidad', celdaText2, text=1)
         self.vista.append_column(columnaCantidad)
 
-
         btnGuardar = Gtk.Button(label="GUARDAR")
         btnGuardar.connect("clicked", self.on_btnGuardar_clicked)
         self.cajaLista.pack_start(self.vista, True, True, 0)
@@ -105,7 +105,7 @@ class CrearFactura(Gtk.Window):
 
             leerFacturas = cursor.execute("select idFactura,nombreCliente from facturasClientes")
             for factura in leerFacturas:
-                fac = str(factura[0])+" - "+factura[1]
+                fac = str(factura[0]) + " - " + factura[1]
                 self.facturas.append([fac])
         except (dbapi2.DatabaseError):
             print("Error de la Base de Datos")
@@ -122,7 +122,6 @@ class CrearFactura(Gtk.Window):
         btnGenerar.connect("clicked", self.on_btnGenerarFactura_clicked)
         generarFactura.pack_start(self.cmbFacturas, True, True, 0)
         generarFactura.pack_start(btnGenerar, True, True, 0)
-
 
         señales = {
             "on_btnVolver_clicked": self.on_btnVolver_clicked,
@@ -169,16 +168,18 @@ class CrearFactura(Gtk.Window):
             cursorID = cursor.execute("SELECT idFactura FROM facturasClientes ORDER BY idFactura DESC LIMIT 1")
             idNuevo = cursorID.fetchone()[0] + 1
             insertarFactura = cursor.execute(
-                "insert into facturasClientes values('" + str(idNuevo) + "','" + nombre + "','" + telefono+ "','" + direccion + "','" + correo + "')")
+                "insert into facturasClientes values('" + str(
+                    idNuevo) + "','" + nombre + "','" + telefono + "','" + direccion + "','" + correo + "')")
             baseDatos.commit()
             print("DETALLES AÑADIDOS CON EXITO")
-            fac = str(idNuevo)+" - "+nombre
+            fac = str(idNuevo) + " - " + nombre
             self.facturas.append([fac])
 
         for lista in self.modelo:
-            cursorIDProducto = cursor.execute("SELECT id FROM productos where nombre='"+lista[0]+"'")
+            cursorIDProducto = cursor.execute("SELECT id FROM productos where nombre='" + lista[0] + "'")
             idProducto = cursorIDProducto.fetchone()[0]
-            insertarFactura = cursor.execute("insert into facturasInfo values('" + str(idNuevo) + "','"+idProducto+"','"+ str(lista[1]) + "')")
+            insertarFactura = cursor.execute(
+                "insert into facturasInfo values('" + str(idNuevo) + "','" + idProducto + "','" + str(lista[1]) + "')")
             baseDatos.commit()
             print("INFO AÑADIDA CON EXITO")
 
@@ -192,6 +193,7 @@ class CrearFactura(Gtk.Window):
         factura = facturaSeleccionada.split(" - ")
         idFactura = factura[0]
         generarFactura(idFactura)
+
 
 if __name__ == "__main__":
     CrearFactura()

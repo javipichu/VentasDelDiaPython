@@ -353,7 +353,7 @@
             </child>
             <child>
               <object class="GtkButton" id="btnSalir">
-                <property name="label" translatable="yes">Salir</property>
+                <property name="label" translatable="yes">Exit</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>

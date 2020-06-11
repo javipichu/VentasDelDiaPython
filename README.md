@@ -7,15 +7,16 @@ El menu principal esta compuesto por el nombre del proyecto y de la tienda en la
     - MOdificar proveedor existente.
     - Libros Stock
     - Generar Fctura.
-![Screenshot](Principal.png)
+![Screenshot](Principal.png) Principal.png
 
 Si accedemos a 'Nuevo proveedor' nos aparecera un formulario para añadir un nuevo proveedor y un boton para añadirlo a la bade de datos.
-![Screenshot](NuevoPreovedor.png)
+![Screenshot](NuevoPreovedor.png) NuevoPreovedor.png
 
 En la ventana de Modificar proveedos existente, podremos modificar cualquier valor de cualquier de los proveedores que tengamos en la basde de datos. 
 Tambien podremos eliminar los preveedores que queramos.
 
-![Screenshot](Listadeproveedores+.png)
+![Screenshot](Listadeproveedores+.png) Listadeproveedores+.png)
+
 
 En la ventana de stock, podremos gestionar por completo el stock.
 
@@ -24,11 +25,11 @@ En la ventana de stock, podremos gestionar por completo el stock.
     - Modificar cualquier dato de los productos existentes.
     - Generar un pdf con el stock actual.
 
-![Screenshot](inventario.png)
+![Screenshot](inventario.png) inventario.png
 
 En la ventama de crear factura, generarremos un pdf como factura completando los campos de datos personales del comprador.
 También especificaremos que productos se han comprado en el supermercado y en que cantidad.
-![Screenshot](Crearfactura.png)
+![Screenshot](Crearfactura.png)  Crearfactura.png
 
 He escogido emular un supermercado DIA por que no se me ocurria nada, y como con todo lo de la cuarentena y teniendo una amiga trabajando en primera linea, decidí crear esta pequeña interfaz emulando la peticion de pedidos a los proveedores que tienen que hacer todas las semanas. De ahí saqué la idea del trabajo.
 

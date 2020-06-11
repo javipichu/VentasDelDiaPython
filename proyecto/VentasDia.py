@@ -9,7 +9,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 
-class CasaDelLibro():
+class VentasdelDia():
     """Ventana Principal Ventas del dia.
        Metodos:
             __init__ --Constructor
@@ -73,10 +73,10 @@ class CasaDelLibro():
         Inventario(self.ventana)
 
 def main():
-    CasaDelLibro()
+    VentasdelDia()
     Gtk.main()
 
 if __name__ == "__main__":
-    CasaDelLibro()
+    VentasdelDia()
     Gtk.main()
 

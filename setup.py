@@ -1,27 +1,12 @@
-from setuptools import setup , find_packages
+from setuptools import setup
 
 setup(
-    name="VentasdelDia",
-    version="1.0",
-    author="javi",
-    author_email="jalvarezotero@danielcastelao.org",
-    license="GLP",
-    platforms="Unix",
-    clasifiers=["Development Status :: 3 - Alpha",
-                "Environment :: Console",
-                "Topic :: Software Development :: Libraries",
-                "License :: OSI Aproved :: GNU General Public License",
-                "Programming Language :: Python :: 3.4",
-                "Operating System :: Linux Ubuntu"
-                ],
-    description="Proyecto DI con sphinx reportlab y mysqllite",
-    keywords="empaquetado instalador paquetes",
-    packages=find_packages(),
-    #data_files=[('datos', ['dat/datos.txt'])],
-    package_data={
-        "": ["*.txt", "*.rst", "*.glade", "*.py"],
-        "proyecto": ["*"],
-        "Imagenes_Docu": ["*"],
-    },
-    entry_points={'console_scripts': ['openProyect = proyecto.VentasdelDia:main', ], }
+    name='VentasDelDia',
+    version='1.0.0',
+    packages=[''],
+    url='https://Supermercadosdia.com',
+    license='',
+    author='dam2',
+    author_email='jalvarezotero',
+    description='Emulador de una interfaz para los supermercados DIA para las peticiones de material a los proveedores'
 )

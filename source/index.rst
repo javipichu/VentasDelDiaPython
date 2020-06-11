@@ -1,10 +1,10 @@
-.. Casa-Del-Libro documentation master file, created by
-   sphinx-quickstart on Fri Mar 27 22:11:43 2020.
+.. VentasdelDia documentation master file, created by
+   sphinx-quickstart on Thu Jun 11 17:54:44 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Supermercados DIA  documentation!
-==========================================
+Welcome to VentasdelDia's documentation!
+========================================
 
 .. toctree::
    :maxdepth: 2

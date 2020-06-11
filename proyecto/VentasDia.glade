@@ -83,7 +83,7 @@
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkButton" id="btnModificarProv">
-                <property name="label" translatable="yes">Modificar Proveedor existente</property>
+                <property name="label" translatable="yes">	Modificar Proveedor 	</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -111,7 +111,7 @@
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkButton" id="btnStock">
-                <property name="label" translatable="yes">Productos en Stock</property>
+                <property name="label" translatable="yes"> Stock</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -139,7 +139,7 @@
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkButton" id="btnFactura">
-                <property name="label" translatable="yes">Generar Factura</property>
+                <property name="label" translatable="yes">Nueva Factura	</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>

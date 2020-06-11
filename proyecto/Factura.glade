@@ -23,7 +23,7 @@
               <object class="GtkLabel" id="lblTitulo">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Casa del Libro</property>
+                <property name="label" translatable="yes">Supermercados DIA</property>
                 <attributes>
                   <attribute name="foreground" value="#2e2e34343636"/>
                   <attribute name="background" value="#f5f579790000"/>
@@ -329,7 +329,7 @@
             </child>
             <child>
               <object class="GtkButton" id="btnSalir">
-                <property name="label" translatable="yes">SALIR</property>
+                <property name="label" translatable="yes">Exit</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>

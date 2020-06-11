@@ -16,13 +16,7 @@ class listaProveedores(Gtk.Window):
     """
     def __init__(self,main):
         """Constructor de la Ventana listaProveedores de la Casa del Libro.
-            Esta ventana nos permite visualizar, modificar y eliminar los proveedores.
-
-            Parametros:
-                   :param main: recibe el objeto window del main para poder volver a la ventana principal.
-
-            Excepciones:
-                -dbapi2.DatabaseError
+            Esta ventana nos permite visualizar, modificar y eliminar los proveedores
         """
         self.Main = main
 
@@ -32,7 +26,7 @@ class listaProveedores(Gtk.Window):
         self.ventana = builder.get_object("Main")
         ## self.set_default_size(WIDTH, HEIGHT)
 
-        ##AÑADIMOS LA CABECERA
+       
         cabeceira = Gtk.HeaderBar(title="Lista Proveedores")
         cabeceira.set_subtitle("Informacion de todos los proveedores de la tienda")
         cabeceira.props.show_close_button = True
@@ -122,8 +116,6 @@ class listaProveedores(Gtk.Window):
         """Este metodo se usa para jugar con la visibilidad de ciertos elemento.
               Pone visible todos los elementos menos la caja cajaModificar que se hara visible al
               clicar el boton de modificar o añadir.
-                   :param ventana: objeto  Window
-                   :return: None
         """
         ventana.show_all()
         self.cajaModificar.hide()
@@ -131,9 +123,6 @@ class listaProveedores(Gtk.Window):
     def on_btnVolver_clicked(self, boton):
         """Vuelve a la ventana principal
                 Este metodo accede a la ventana principal
-
-            :param boton: acceso al botton
-            :return: None
         """
         self.Main.show_all()
         self.ventana.hide()
@@ -141,8 +130,6 @@ class listaProveedores(Gtk.Window):
     def on_btnModificar_clicked(self, boton):
         """Este metodo se usa para para hacer visible el formulario y cargar el proveedor
                Pone visible la caja cajaModificar y carga los datos del proveedor seleccionado.
-                   :param boton: acceso al botton
-                   :return: None
         """
         self.cajaModificar.show();
         seleccion = self.vista.get_selection()
@@ -157,8 +144,6 @@ class listaProveedores(Gtk.Window):
     def on_btnBorrar_clicked(self, boton):
         """Este metodo se usa para borrar un proveedor.
             Si hay un proveedor selecionado, borra dicho proveedor de la base de datos
-                :param boton: acceso al botton
-                :return: None
         """
         seleccion = self.vista.get_selection()
         modelo, puntero = seleccion.get_selected()
@@ -182,8 +167,6 @@ class listaProveedores(Gtk.Window):
     def on_btnGuardar_clicked(self, boton):
         """Este metodo se usa para guardar los cambios en la base de datos
                 Recoge los datos del formulario y modifica el produto.
-                     :param boton: acceso al botton
-                     :return: None
         """
         seleccion = self.vista.get_selection()
         modelo, puntero = seleccion.get_selected()

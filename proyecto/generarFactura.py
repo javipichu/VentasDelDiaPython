@@ -9,14 +9,9 @@ from sqlite3 import dbapi2
 
 class generarFactura():
     """Clase que genera un PDF con la factura de un cliente.
-                    Metodos:
-                         __init__ --Constructor
             """
     def __init__(self,id):
         """Constructor de la clase que genera una factura .
-                             Parametros:
-                                   :param id: id de la factura que se quiere generar
-
                              Excepciones:
                                 -dbapi2.DatabaseError
                         """

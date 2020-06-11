@@ -10,7 +10,7 @@ from sqlite3 import dbapi2
 class CrearFactura(Gtk.Window):
     """Ventana CrearFactura.
             Metodos:
-                 __init__ --Constructor
+                 __init__
                  Volver -- Volver a la ventana pincipal
                  Añadir -- Añadir un nuevo producto a la factura
                  Guardar -- Guarda la factura en la base de datos
@@ -18,12 +18,7 @@ class CrearFactura(Gtk.Window):
     """
 
     def __init__(self, main):
-        """Constructor de la Ventana CrearFactura.
-                Parametros:
-                    :param main: recibe el objeto window del main para poder volver a la ventana principal.
-                Excepciones:
-                   -dbapi2.DatabaseError
-        """
+        """Constructor de la Ventana CrearFactura. """
         self.Main = main
 
         builder = Gtk.Builder()
@@ -95,8 +90,7 @@ class CrearFactura(Gtk.Window):
         self.cajaLista.pack_start(btnGuardar, True, True, 0)
         self.productos.add(self.cajaLista)
 
-        ##Cargamos las facuras guardadas
-        ##Modelo
+
         self.facturas = Gtk.ListStore(str)
         try:
             ###Conectamos con la base de datos
@@ -113,7 +107,7 @@ class CrearFactura(Gtk.Window):
             print("Cerramos la conexion")
             cursor.close()
             baseDatos.close()
-        ##Combo
+
         celdaCombo = Gtk.CellRendererText()
         self.cmbFacturas = Gtk.ComboBox(model=self.facturas)
         self.cmbFacturas.pack_start(celdaCombo, True)
@@ -135,16 +129,12 @@ class CrearFactura(Gtk.Window):
 
     def on_btnVolver_clicked(self, boton):
         """"Vuelve a la ventana principal
-            :param boton: acceso al botton
-            :return: None
         """
         self.Main.show_all()
         self.ventana.hide()
 
     def on_btnAñadir_clicked(self, boton):
-        """Este metodo se usa para añadir los priductos a la lista
-                     :param boton: acceso al botton
-                     :return: None
+        """Este metodo se usa para añadir los productos a la lista
         """
         indiceProducto = self.cmbProductos.get_active_iter()
         producto = self.cmbProductos.get_model()[indiceProducto][0]
@@ -153,8 +143,6 @@ class CrearFactura(Gtk.Window):
 
     def on_btnGuardar_clicked(self, boton):
         """Este metodo se usa para guardar la factura
-                      :param boton: acceso al botton
-                      :return: None
         """
         nombre = self.nombre.get_text()
         direccion = self.direccion.get_text()
@@ -185,8 +173,6 @@ class CrearFactura(Gtk.Window):
 
     def on_btnGenerarFactura_clicked(self, boton):
         """"Este metodo se usa para generar la factura
-                      :param boton: acceso al botton
-                      :return: None
         """
         indiceFactura = self.cmbFacturas.get_active_iter()
         facturaSeleccionada = self.cmbFacturas.get_model()[indiceFactura][0]

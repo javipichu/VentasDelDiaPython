@@ -7,7 +7,7 @@ from proyecto.generarInventario import generarInventario
 
 class Inventario(Gtk.Window):
     """Ventana Inventario de la Casa del Libro.
-            Metodos:
+            Metodos Usados:
                  __init__ --Constructor
                  inital_show -- Metodo para trabajar con la visibilidad
                  on_btnVolver_clicked -- Volver a la ventana pincipal
@@ -20,12 +20,6 @@ class Inventario(Gtk.Window):
     def __init__(self, main):
         """Constructor de la Ventana Inventario de la Casa del Libro.
              Esta ventana nos permite visualizar, añadir, modificar y eliminar los productoss.
-
-             Parametros:
-                   :param main: recibe el objeto window del main para poder volver a la ventana principal.
-
-             Excepciones:
-                -dbapi2.DatabaseError
         """
         self.Main = main
         self.añadir = False
@@ -149,9 +143,6 @@ class Inventario(Gtk.Window):
 
     def inital_show(self, ventana):
         """Este metodo se usa para jugar con la visibilidad de ciertos elemento.
-               Pone visible todos los elementos menos la caja cajaModificar que se hara visible al
-               clicar el boton de modificar o añadir.
-                    :param ventana: objeto  Window
                     :return: None
         """
         ventana.show_all()
@@ -161,7 +152,6 @@ class Inventario(Gtk.Window):
         """Vuelve a la ventana principal
                 Este metodo accede a la ventana principal
 
-            :param boton: acceso al botton
             :return: None
         """
         self.Main.show_all()
@@ -170,8 +160,7 @@ class Inventario(Gtk.Window):
     def on_btnAñadir_clicked(self, boton):
         """Este metodo se usa para hacer visible el formulario para añadir un elemento
             Pone visible la caja cajaModificar y establece que la operacion que se hara sera una insercion
-                 :param boton: acceso al botton
-                 :return: None
+
         """
         self.cajaModificar.show();
         self.añadir=True
@@ -179,8 +168,6 @@ class Inventario(Gtk.Window):
     def on_btnModificar_clicked(self, boton):
         """Este metodo se usa para para hacer visible el formulario y cargar el producto
             Pone visible la caja cajaModificar y carga los datos del producto seleccionado.
-                 :param boton: acceso al botton
-                 :return: None
         """
         self.cajaModificar.show();
         self.añadir = False
@@ -201,8 +188,7 @@ class Inventario(Gtk.Window):
     def on_btnGuardar_clicked(self, boton):
         """Este metodo se usa para guardar los cambios en la base de datos
                 Segun la operacion que se desee hacer añade o modifica un producto.
-                   :param boton: acceso al botton
-                   :return: None
+
         """
         if(self.añadir==True):
             ##Conectamos con la base de datos
@@ -277,8 +263,6 @@ class Inventario(Gtk.Window):
     def on_btnBorrar_clicked(self, boton):
         """Este metodo se usa para borrar un producto.
             Si hay un producto selecionado, borra dicho producto de la base de datos
-                 :param boton: acceso al botton
-                 :return: None
         """
         seleccion = self.vista.get_selection()
         modelo, puntero = seleccion.get_selected()
@@ -302,8 +286,7 @@ class Inventario(Gtk.Window):
     def on_btnGenerarInventario_clicked(self,boton):
         """Este metodo se usa para generar un informe con los productos de la tienda.
             Se llama a la clase informeInventario que leera los datos de la base de datos y generara un PDF.
-                    :param boton: acceso al botton
-                    :return: None
+
         """
         generarInventario()
 

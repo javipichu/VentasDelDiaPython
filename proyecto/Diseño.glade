@@ -24,7 +24,7 @@
               <object class="GtkLabel" id="lblTitulo">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Casa Del Libro</property>
+                <property name="label" translatable="yes">Supermercados DIA</property>
                 <attributes>
                   <attribute name="foreground" value="#2e2e34343636"/>
                   <attribute name="background" value="#efef29292929"/>

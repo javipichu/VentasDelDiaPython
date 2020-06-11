@@ -9,15 +9,9 @@ from sqlite3 import dbapi2
 
 class generarInventario():
     """Clase que genera un PDF con la lista de productos.
-                Metodos:
-                     __init__ --Constructor
         """
     def __init__(self):
         """Constructor de la clase que genera un informe.
-
-                     Parametros:
-                        -No tiene
-
                      Excepciones:
                         -dbapi2.DatabaseError
                 """

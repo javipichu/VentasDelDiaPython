@@ -10,7 +10,7 @@ from gi.repository import Gtk
 
 
 class CasaDelLibro():
-    """Ventana Principal Ventas Dia.
+    """Ventana Principal Ventas del dia.
        Metodos:
             __init__ --Constructor
 
@@ -20,14 +20,7 @@ class CasaDelLibro():
             on_btnInventario_clicked -- Acceso a la ventana Inventario
     """
     def __init__(self):
-        """Constructor de la Ventana Principal .
-
-            Parametros:
-            -No tiene.
-
-            Excepciones:
-            -No teiene.
-
+        """Constructor de la Ventana Principal
         """
         builder =  Gtk.Builder()
         builder.add_from_file("VentasDia.glade")
@@ -57,35 +50,24 @@ class CasaDelLibro():
     def on_btnAñadirProv_clicked(self, boton):
         """Abre la ventana Añadir Proveedor
 
-            :param boton: acceso al botton
-            :return: None
         """
         self.ventana.hide()
         NuevoProv(self.ventana)
 
     def on_btnModProv_clicked(self, boton):
         """Abre la ventana Modificar Proveedor
-
-                    :param boton: acceso al botton
-                    :return: None
                 """
         self.ventana.hide()
         listaProveedores(self.ventana)
 
     def on_btnFactura_clicked(self, boton):
         """Abre la ventana Crear Factura
-
-            :param boton: acceso al botton
-            :return: None
         """
         self.ventana.hide()
         CrearFactura(self.ventana)
 
     def on_btnInventario_clicked(self, boton):
         """Abre la ventana Inventario
-
-            :param boton: acceso al botton
-            :return: None
         """
         self.ventana.hide()
         Inventario(self.ventana)

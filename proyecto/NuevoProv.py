@@ -5,21 +5,15 @@ from gi.repository import Gtk
 from sqlite3 import dbapi2
 
 class NuevoProv(Gtk.Window):
-    """Ventana NuevoProv de la Casa del Libro.
+    """Ventana NuevoProv de la Ventas del dia.
            Metodos:
                 __init__ --Constructor
                 on_btnVolver_clicked -- Volver a la ventana pincipal
                 on_btnGuardar_clicked -- Guardamos el nuevo proveedor
     """
     def __init__(self, main):
-        """Constructor de la Ventana NuevoProv de la Casa del Libro.
+        """Constructor de la Ventana NuevoProv de Ventas del dia.
                   Esta ventana nos permite añadir un nuevo proveedor a nuestra tienda
-
-                   Parametros:
-                   :param main: recibe el objeto window del main para poder volver a la ventana principal.
-
-                   Excepciones:
-                   -No tiene.
         """
         self.Main = main
 
@@ -60,8 +54,6 @@ class NuevoProv(Gtk.Window):
         """Vuelve a la ventana principal
                 Este metodo accede a la ventana principal
 
-            :param boton: acceso al botton
-            :return: None
         """
         self.Main.show_all()
         self.ventana.hide()
@@ -71,8 +63,6 @@ class NuevoProv(Gtk.Window):
         """Guarda los proveedores en la BD.
             Este metodo recoge los datos de los entry y los guarda en la BD.
             Luego se genera el id a partir de el ultimpo id de la tabla.
-            :param boton: acceso al botton
-            :return: None
         """
         nombre = self.nombre.get_text()
         CIF = self.CIF.get_text()

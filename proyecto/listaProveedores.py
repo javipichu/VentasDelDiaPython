@@ -26,7 +26,7 @@ class listaProveedores(Gtk.Window):
         self.ventana = builder.get_object("Main")
         ## self.set_default_size(WIDTH, HEIGHT)
 
-       
+
         cabeceira = Gtk.HeaderBar(title="Lista Proveedores")
         cabeceira.set_subtitle("Informacion de todos los proveedores de la tienda")
         cabeceira.props.show_close_button = True

@@ -5,8 +5,8 @@ El menu principal esta compuesto por el nombre del proyecto y de la tienda en la
 
     - Nuevo proveedor
     - MOdificar proveedor existente.
-    - Libros Stock
-    - Generar Fctura.
+    - Stock
+    - Generar Fctura
 ![Screenshot](Principal.png) Principal.png
 
 Si accedemos a 'Nuevo proveedor' nos aparecera un formulario para añadir un nuevo proveedor y un boton para añadirlo a la bade de datos.

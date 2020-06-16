@@ -8,9 +8,9 @@ from sqlite3 import dbapi2
 
 
 class CrearFactura(Gtk.Window):
-    """Ventana CrearFactura.
+    """
             Metodos:
-                 __init__
+
                  Volver -- Volver a la ventana pincipal
                  Añadir -- Añadir un nuevo producto a la factura
                  Guardar -- Guarda la factura en la base de datos

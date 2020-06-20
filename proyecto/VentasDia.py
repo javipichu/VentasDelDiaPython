@@ -11,7 +11,7 @@ from gi.repository import Gtk
 
 class VentasdelDia():
     """Ventana Principal Ventas del dia.
-    
+
     """
 
     def __init__(self):

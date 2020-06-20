@@ -11,13 +11,7 @@ from gi.repository import Gtk
 
 class VentasdelDia():
     """Ventana Principal Ventas del dia.
-       Metodos:
-            __init__ --Constructor
-
-            on_btnAñadirProv_clicked -- Acceso a la ventana Añadir Proveedor
-            on_btnModProv_clicked -- Acceso a la ventana Modificar Proveedor
-            on_btnFactura_clicked  -- Acceso a la ventana Crear Factura
-            on_btnInventario_clicked -- Acceso a la ventana Inventario
+    
     """
 
     def __init__(self):

@@ -5,14 +5,14 @@ El menu principal esta compuesto por el nombre del proyecto y de la tienda en la
 
     - Nuevo proveedor
     - MOdificar proveedor existente.
-    - Libros Stock
-    - Generar Fctura.
+    - Stock
+    - Generar Fctura
 ![Screenshot](Principal.png) Principal.png
 
 Si accedemos a 'Nuevo proveedor' nos aparecera un formulario para añadir un nuevo proveedor y un boton para añadirlo a la bade de datos.
 ![Screenshot](NuevoPreovedor.png) NuevoPreovedor.png
 
-En la ventana de Modificar proveedos existente, podremos modificar cualquier valor de cualquier de los proveedores que tengamos en la basde de datos. 
+En la ventana de Modificar proveedor existente, podremos modificar cualquier valor de cualquier de los proveedores que tengamos en la basde de datos. 
 Tambien podremos eliminar los preveedores que queramos.
 
 ![Screenshot](Listadeproveedores+.png) Listadeproveedores+.png)
@@ -21,7 +21,7 @@ Tambien podremos eliminar los preveedores que queramos.
 En la ventana de stock, podremos gestionar por completo el stock.
 
     - Añadir nuevos productos con sus respectivos datos.
-    - Eliminar estos libros que tengamos en la BD.
+    - Eliminar los productos
     - Modificar cualquier dato de los productos existentes.
     - Generar un pdf con el stock actual.
 

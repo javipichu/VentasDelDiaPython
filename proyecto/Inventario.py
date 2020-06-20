@@ -7,15 +7,7 @@ from proyecto.generarInventario import generarInventario
 
 class Inventario(Gtk.Window):
     """Ventana Inventario de la Casa del Libro.
-            Metodos Usados:
-                 __init__ --Constructor
-                 inital_show -- Metodo para trabajar con la visibilidad
-                 on_btnVolver_clicked -- Volver a la ventana pincipal
-                 on_btnEbgadir_clicked -- Añadir un nuevo producto
-                 on_btnModificar_clicked -- Modificar un producto existente.
-                 on_btnGuardar_clicked -- Guarda los cambios realizados.
-                 on_btnBorrar_clicked -- Borra el producto seleccionado.
-                 on_btnGenerarInventario_clicked -- Genera un informe con los productos disponibles
+
     """
     def __init__(self, main):
         """Constructor de la Ventana Inventario de la Casa del Libro.

@@ -11,7 +11,9 @@ class generarFactura():
     """Clase que genera un PDF con la factura de un cliente.
             """
     def __init__(self,id):
-        """Constructor de la clase 
+        """Constructor de la clase que genera una factura .
+                             Excepciones:
+                                -dbapi2.DatabaseError
                         """
         idFactura = id
         factura = []

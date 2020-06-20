@@ -19,10 +19,11 @@ class VentasdelDia():
             on_btnFactura_clicked  -- Acceso a la ventana Crear Factura
             on_btnInventario_clicked -- Acceso a la ventana Inventario
     """
+
     def __init__(self):
         """Constructor de la Ventana Principal
         """
-        builder =  Gtk.Builder()
+        builder = Gtk.Builder()
         builder.add_from_file("VentasDia.glade")
 
         self.ventana = builder.get_object("Main")
@@ -72,11 +73,12 @@ class VentasdelDia():
         self.ventana.hide()
         Inventario(self.ventana)
 
+
 def main():
     VentasdelDia()
     Gtk.main()
 
+
 if __name__ == "__main__":
     VentasdelDia()
     Gtk.main()
-
